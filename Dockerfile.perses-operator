@@ -22,7 +22,7 @@ USER nobody
 
 COPY --from=build-env --chown=nobody:nobody /app/bin/manager  /bin/manager
 COPY --from=build-env --chown=nobody:nobody /app/LICENSE      /LICENSE
-COPY --from=build-env --chown=nobody:nobody /etc/mime.types /etc/mime.types
+COPY --from=build-env --chown=nobody:nobody /etc/mime.types   /etc/mime.types
 
 EXPOSE     8080
 ENTRYPOINT [ "/bin/manager" ]
